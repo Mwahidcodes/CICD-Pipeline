@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.app {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 25px;
+}
+
+.note-form,
+.notes-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.note-form {
+  height: fit-content;
+}
+
+.note-form h2,
+.notes-section h2 {
+  margin-top: 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #222;
+  color: white;
+  font-size: 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.cancel-btn {
+  background-color: #777;
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+.note-card {
+  background-color: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #222;
+}
+
+.note-card h3 {
+  margin-top: 0;
+}
+
+.note-card p {
+  color: #444;
+}
+
+.note-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.note-actions button {
+  margin-bottom: 0;
+}
+
+.edit-btn {
+  background-color: #007bff;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
